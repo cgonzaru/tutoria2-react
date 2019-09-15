@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Page from './components/Page';
 
 
 class App extends React.Component {
@@ -50,20 +51,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ul className="list">
-          {this.state.data.map((dat, index) =>{
-            return (
-              <li className="item" key={index}>
-                <div className="name">{dat.name}</div>
-                <div className="email">{dat.email}</div>
-                <div className="password">{dat.passwords}</div>
-                <ul className="bank"></ul>
-                <div className="iban">{dat.bank.iban}</div>
-                <div className="pin">{dat.bank.pin}</div>
-              </li>
-            );
-          })}
-        </ul>
+        <Page data={this.state.data}/>
       </div>
     );
   }
