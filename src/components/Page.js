@@ -12,6 +12,7 @@ class Page extends React.Component {
       <React.Fragment >
         <Header />
         <DataList data={this.props.data}/>
+        <Footer />
       </React.Fragment>
     );
   }
